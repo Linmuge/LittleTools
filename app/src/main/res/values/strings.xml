@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TestDemo</string>
+    <string name="maintoswipe">左右滑动事件监听</string>
+    <string name="try_swipe">请左右滑动试试看</string>
+    <string name="phone">这是真机</string>
+    <string name="emulator">这是模拟器</string>
+    <string name="emulator_check">模拟器检测</string>
+</resources>

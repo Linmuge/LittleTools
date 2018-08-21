@@ -1,2 +1,8 @@
-# LittleTools
-Some simple functions of package classes
+#### 说明
+这是我在做项目中用到的一些小功能的封装类,目前有以下几种(倒序)
+
+#####2,模拟器检测
+通过检测光传感器，基带信息，渠道信息，处理器信息，进程组等信息判断是否为模拟器.
+存放于EmulatorCheck包下
+#####1,屏幕左右滑动事件判断
+存放于SwipeLeftOrRight包下

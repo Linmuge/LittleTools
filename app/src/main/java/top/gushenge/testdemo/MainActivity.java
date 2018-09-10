@@ -9,6 +9,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import top.gushenge.testdemo.EmulatorCheck.EmulatorActivity;
 import top.gushenge.testdemo.SwipeLeftOrRight.SwipeActivity;
+import top.gushenge.testdemo.TaobaoNews.NewsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     Button mainToSwipe;
     @BindView(R.id.emulator_check)
     Button emulatorCheck;
+    @BindView(R.id.taobao_news)
+    Button news;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,6 @@ public class MainActivity extends AppCompatActivity {
     private void initUi() {
         mainToSwipe.setOnClickListener(v->startActivity(new Intent(this, SwipeActivity.class)));
         emulatorCheck.setOnClickListener(v->startActivity(new Intent(this, EmulatorActivity.class)));
-
+        news.setOnClickListener(v->startActivity(new Intent(this, NewsActivity.class)));
     }
 }

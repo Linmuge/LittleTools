@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SwipeLeftOrRight.SwipeActivity" />
-        <activity android:name=".EmulatorCheck.EmulatorActivity"></activity>
+        <activity android:name=".EmulatorCheck.EmulatorActivity" />
+        <activity android:name=".TaobaoNews.NewsActivity"></activity>
     </application>
 
 </manifest>

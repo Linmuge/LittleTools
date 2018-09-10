@@ -18,9 +18,11 @@ import android.widget.ListView;
 import android.widget.Scroller;
 
 /**
+
 * @Description: 自动滚动的ListView
 */
 public class AutoScrollView extends ListView {
+    public static final String TAG = "AutoScrollView";
 	
 	public final static int SCROLL_UP = 0x00;
 	
@@ -128,7 +130,7 @@ public class AutoScrollView extends ListView {
 	@Override
 	protected void onAttachedToWindow() {
 		super.onAttachedToWindow();
-		Log.i("AutoScrollListView", "onAttachedToWindow");
+		Log.d(TAG, "onAttachedToWindow");
 		postDelayed(mLoopRunnable, DALY_TIME);
 		mAnimating = true;
 	}
@@ -136,21 +138,21 @@ public class AutoScrollView extends ListView {
 	@Override
 	protected void onDetachedFromWindow() {
 		super.onDetachedFromWindow();
-		Log.i("AutoScrollListView", "onDetachedFromWindow");
+		Log.d(TAG, "onDetachedFromWindow");
 		removeCallbacks(mLoopRunnable);
 	}
 	
 	int preY = 0;
 	@Override
 	public void computeScroll() {
-		Log.i("AutoScrollListView", "computeScroll");
+		Log.d(TAG, "computeScroll");
 		if (!mScroller.computeScrollOffset()) {
-			Log.i("AutoScrollListView", "compute finish");
+			Log.d(TAG, "compute finish");
 			if (mAnimating) {
-				Log.i("AutoScrollListView", "compute ignore runnable");
+				Log.d(TAG, "compute ignore runnable");
 				return;
 			}
-			Log.i("AutoScrollListView", "compute send runnable");
+			Log.d(TAG, "compute send runnable");
 			removeCallbacks(mLoopRunnable);
 			postDelayed(mLoopRunnable, DALY_TIME);
 			mAnimating = true;
@@ -158,7 +160,7 @@ public class AutoScrollView extends ListView {
 			checkPosition();
 		}else {
 			mAnimating = false;
-			Log.i("AutoScrollListView", "compute not finish");
+			Log.d(TAG, "compute not finish");
 			int dY = mScroller.getCurrY() - preY;
 			ListViewCompat.scrollListBy(this, dY);
 			preY = mScroller.getCurrY();
@@ -245,7 +247,7 @@ public class AutoScrollView extends ListView {
 
 		@Override
 		public void run() {
-			Log.i("AutoScrollListView", "run");
+			Log.d(TAG, "run");
 			mAnimating = true;
 			View childAt = getChildAt(0);
 			int scrollHeight = childAt.getMeasuredHeight() + getDividerHeight();

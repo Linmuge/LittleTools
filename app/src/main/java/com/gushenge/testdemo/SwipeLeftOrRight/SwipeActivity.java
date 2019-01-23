@@ -1,14 +1,14 @@
-package top.gushenge.testdemo.SwipeLeftOrRight;
+package com.gushenge.testdemo.SwipeLeftOrRight;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import top.gushenge.testdemo.R;
+import com.gushenge.testdemo.R;
 
 public class SwipeActivity extends AppCompatActivity {
 

@@ -1,25 +1,27 @@
-package top.gushenge.testdemo.EmulatorCheck;
+package com.gushenge.testdemo.EmulatorCheck;
 
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import top.gushenge.testdemo.R;
+import com.gushenge.testdemo.R;
 
 public class EmulatorActivity extends AppCompatActivity {
 
     @BindView(R.id.emulator)
     TextView emulator;
+    private int suspectCount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emulator);readSysProperty();
         ButterKnife.bind(this);
-        if (readSysProperty()) {
+        readSysProperty();
+        if (suspectCount<2) {
             emulator.setText(R.string.phone);
         } else {
             emulator.setText(R.string.emulator);
@@ -29,8 +31,8 @@ public class EmulatorActivity extends AppCompatActivity {
      * 判断处理器基带等信息,超过两项及以上通过即为真机
      * 如此可以排除大部分模拟器
      * return false 为模拟器 */
-    public boolean readSysProperty() {
-        int suspectCount = 0;
+    public void readSysProperty() {
+        suspectCount = 0;
         //判断是否存在光传感器来判断是否为模拟器
         SensorManager sensorManager = (SensorManager)this.getSystemService(SENSOR_SERVICE);
         Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
@@ -54,6 +56,5 @@ public class EmulatorActivity extends AppCompatActivity {
         //一些模拟器读取不到进程租信息
         String filter = CommandUtil.getSingleInstance().exec("cat /proc/self/cgroup");
         if (filter == null || filter.length() == 0) ++suspectCount;
-        return suspectCount < 2;
     }
 }

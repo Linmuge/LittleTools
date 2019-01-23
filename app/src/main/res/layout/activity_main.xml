@@ -7,10 +7,10 @@
     tools:context=".MainActivity"
     android:scrollbars="none">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:minHeight="600dp">
 
         <Button
             android:id="@+id/maintoswipe"
@@ -28,6 +28,7 @@
             android:layout_marginTop="8dp"
             android:background="#ffffff"
             android:text="@string/emulator_check"
+            android:layout_below="@id/maintoswipe"
             android:textColor="#000000"
             android:textSize="12sp" />
         <Button
@@ -36,9 +37,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="#ffffff"
+            android:layout_below="@id/emulator_check"
             android:text="@string/taobao_news"
             android:textColor="#000000"
             android:textSize="12sp" />
-    </LinearLayout>
+        <TextView
+            android:id="@+id/github"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/github"
+            android:textColor="@color/emulatorText"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
 
 </ScrollView>

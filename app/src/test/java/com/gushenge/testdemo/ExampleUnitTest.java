@@ -1,4 +1,4 @@
-package top.gushenge.testdemo;
+package com.gushenge.testdemo;
 
 import org.junit.Test;
 

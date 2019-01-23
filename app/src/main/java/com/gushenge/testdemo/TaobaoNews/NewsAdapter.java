@@ -1,4 +1,4 @@
-package top.gushenge.testdemo.TaobaoNews;
+package com.gushenge.testdemo.TaobaoNews;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-import top.gushenge.testdemo.R;
+import com.gushenge.testdemo.R;
 
 public class NewsAdapter extends BaseAdapter implements AutoScrollView.AutoScroll {
     private Random random = new Random();

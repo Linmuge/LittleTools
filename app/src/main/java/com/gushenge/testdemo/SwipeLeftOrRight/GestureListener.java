@@ -1,4 +1,4 @@
-package top.gushenge.testdemo.SwipeLeftOrRight;
+package com.gushenge.testdemo.SwipeLeftOrRight;
 
 
 import android.content.Context;

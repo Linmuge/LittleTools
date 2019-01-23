@@ -1,4 +1,4 @@
-package top.gushenge.testdemo.EmulatorCheck;
+package com.gushenge.testdemo.EmulatorCheck;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

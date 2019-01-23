@@ -1,11 +1,11 @@
-package top.gushenge.testdemo.TaobaoNews;
+package com.gushenge.testdemo.TaobaoNews;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import top.gushenge.testdemo.R;
+import com.gushenge.testdemo.R;
 
 public class NewsActivity extends AppCompatActivity {
 

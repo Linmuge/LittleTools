@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="top.gushenge.testdemo">
+    package="com.gushenge.testdemo">
 
     <application
         android:allowBackup="true"
@@ -15,16 +15,16 @@
             android:name="android.max_aspect"
             android:value="2.1" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.gushenge.testdemo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SwipeLeftOrRight.SwipeActivity" />
-        <activity android:name=".EmulatorCheck.EmulatorActivity" />
-        <activity android:name=".TaobaoNews.NewsActivity"></activity>
+        <activity android:name="com.gushenge.testdemo.SwipeLeftOrRight.SwipeActivity" />
+        <activity android:name="com.gushenge.testdemo.EmulatorCheck.EmulatorActivity" />
+        <activity android:name="com.gushenge.testdemo.TaobaoNews.NewsActivity"></activity>
     </application>
 
 </manifest>

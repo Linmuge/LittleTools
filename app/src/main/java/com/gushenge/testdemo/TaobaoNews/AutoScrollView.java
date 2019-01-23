@@ -1,10 +1,10 @@
-package top.gushenge.testdemo.TaobaoNews;
+package com.gushenge.testdemo.TaobaoNews;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
-import android.support.annotation.IntDef;
-import android.support.v4.widget.ListViewCompat;
+import androidx.annotation.IntDef;
+import androidx.core.widget.ListViewCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;

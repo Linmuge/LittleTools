@@ -1,9 +1,12 @@
 <resources>
-    <string name="app_name">TestDemo</string>
+    <string name="app_name">开发小工具集合</string>
     <string name="maintoswipe">左右滑动事件监听</string>
     <string name="try_swipe">请左右滑动试试看</string>
     <string name="phone">这是真机</string>
     <string name="emulator">这是模拟器</string>
     <string name="emulator_check">模拟器检测</string>
     <string name="taobao_news">仿淘宝上下滚动新闻</string>
+    <string name="github">GitHub地址</string>
+    <string name="downBrowser">请下载浏览器</string>
+    <string name="chooseBrowser">请选择浏览器</string>
 </resources>
